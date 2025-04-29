@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca Digitale | Esplora il mondo dei libri</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="/src/style/styles.css">
+  <link rel="icon" type="favicon" href="./img/favicon.webp">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Carica le librerie da CDN -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.6.0/dist/axios.min.js"></script> -->
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <div class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="book-icon">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+        </svg>
+        <h1>Biblioteca Digitale</h1>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h2>Esplora milioni di libri</h2>
+        <p>Cerca per titolo, autore o argomento nella nostra vasta collezione digitale</p>
+        <div class="search-container">
+          <input type="text" id="searchInput" placeholder="Cerca un libro...">
+          <button id="searchButton">Cerca</button>
+        </div>
+      </section>
+
+      <section class="results-section">
+        <div class="results-info">
+          <h3>Risultati della ricerca</h3>
+          <div id="resultsCount"></div>
+        </div>
+        <div id="loadingIndicator" class="loading-indicator hidden">
+          <div class="spinner"></div>
+          <p>Ricerca in corso...</p>
+        </div>
+        <div id="resultsContainer" class="results-grid"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Biblioteca Digitale &copy; 2025 - Creato con l'API di Open Library</p>
+    </footer>
+  </div>
+
+  <div id="bookModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+<script type="module" src="/src/js/main.js"></script>
+</body>
+</html>
